@@ -1,4 +1,4 @@
-{% set version = "0.10.2" %}
+{% set version = "0.11.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WeightIt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WeightIt/WeightIt_{{ version }}.tar.gz
-  sha256: 087d5b343c785b92b3a0f849ae43370a051039662d5f323d2d7f510fbded9788
+  sha256: 482a1ed8d4157267322ff7087c76dd6609aaadc7872d7672f781c1f410caa22b
 
 build:
   merge_build_host: true  # [win]
