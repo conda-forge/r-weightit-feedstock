@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WeightIt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WeightIt/WeightIt_{{ version }}.tar.gz
-  sha256: 8587a315362dfbdec083eeba9bf35e3403d2f72cfd7cc170430b2a0918f5e502
+  sha256: db53dd248b076bbe12d4e0cfc41e4daf7a86b3ad555820f905a89ed00495fc55
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,16 +23,20 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-backports >=1.1.8
-    - r-cobalt >=4.2.2
+    - r-chk >=0.8.1
+    - r-cobalt >=4.5.1
     - r-crayon
-    - r-ggplot2 >=3.0.0
+    - r-generics
+    - r-ggplot2 >=3.3.0
+    - r-rlang >=1.1.0
   run:
     - r-base
-    - r-backports >=1.1.8
-    - r-cobalt >=4.2.2
+    - r-chk >=0.8.1
+    - r-cobalt >=4.5.1
     - r-crayon
-    - r-ggplot2 >=3.0.0
+    - r-generics
+    - r-ggplot2 >=3.3.0
+    - r-rlang >=1.1.0
 
 test:
   commands:
