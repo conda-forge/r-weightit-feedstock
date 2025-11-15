@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WeightIt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WeightIt/WeightIt_{{ version }}.tar.gz
-  sha256: 4b112d5f36640b6a32578c98c106f9be7e69a242f83672012ed1e1775406a7c0
+  sha256: 7d4b2da21ee3cb5aadb17251ed8b0038d2a0d0351caff7aab5f987edb6d894f1
 
 build:
   number: 0
